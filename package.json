@@ -15,15 +15,15 @@
   "bugs": {
     "url": "https://github.com/comp426-2023-spring/a03-amayak25/issues"
   },
-  "homepage": "https://github.com/comp426-2023-spring/a03-amayak25#readme"
-},
-  
+  "homepage": "https://github.com/comp426-2023-spring/a03-amayak25#readme",
+  "dependencies": {
+    "minimist": "^1.2.7"
+  },
+
   "bin": {
     "node-rps": "./bin/rps-cli.js", "node-rpsls": "rpsls-cli.js"
-  },
- 
-"dependencies": {
-    "minimist": "^1.2.7"
+
 },
   "type": "module"
 }
+
