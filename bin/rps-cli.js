@@ -28,8 +28,4 @@ if (args[0]== '-r' ||args[0]== '--rules')
   console.log('- Rock CRUSHES Scissors')
 }
 
-console.log(JSON.stringify({
-  player: playerShot,
-  opponent: opponentShot,
-  result: result
-}));
+
