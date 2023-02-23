@@ -28,10 +28,11 @@ if (args[0]== '-r' ||args[0]== '--rules')
   console.log('- Rock CRUSHES Scissors')
 }
 
+/*
 try {
       console.log(JSON.stringify(rps(shot)));
     } catch (e) {
       console.error(JSON.stringify({ error: e.message }));
     } 
-
+*/
 
