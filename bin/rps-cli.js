@@ -36,8 +36,8 @@ else if (args[0]== '-r' ||args[0]== '--rules')
 }
 else 
 {
-      let  shot=rps(args._[0]);
-      const result= rps(shot) || rpsls(shot)
+      let result=rps(args._[0]);
+    
 
    if (result instanceof Error){
     console.error(JSON.stringify(`Error: ${result}. is out of range`));
