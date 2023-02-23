@@ -34,8 +34,10 @@ if (args[0] === '-r' || args[0] === '--rules') {
   console.log('- Rock CRUSHES Scissors');
   process.exit(0);
 }
+/*
 try {
       console.log(JSON.stringify(rpsls(shot)));
     } catch (e) {
       console.error(JSON.stringify({ error: e.message }));
     }
+    */
