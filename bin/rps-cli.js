@@ -2,6 +2,7 @@
 #!/usr/bin/env node 
 import minimist from 'minimist';
 import fetch from 'node-fetch';
+import { rps } from "/lib/rpsls.js"
 
 const args = minimist(process.argv.slice(2));
 
@@ -26,5 +27,11 @@ if (args[0]== '-r' ||args[0]== '--rules')
   console.log('- Paper COVERS Rock');
   console.log('- Rock CRUSHES Scissors')
 }
+
+try {
+      console.log(JSON.stringify(rps(shot)));
+    } catch (e) {
+      console.error(JSON.stringify({ error: e.message }));
+    } 
 
 
