@@ -36,7 +36,7 @@ else if (args[0]== '-r' ||args[0]== '--rules')
 }
 else 
 {
-      const shot=rpsls(args._[0]);
+      let  shot=rps(args._[0]);
       const result= RPS(shot) || RPSLS(shot)
 
    if (result instanceof Error){
