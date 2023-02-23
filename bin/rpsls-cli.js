@@ -1,8 +1,7 @@
 ./bin/*-cli.js
-./bin/*-cli.js
 #!/usr/bin/env node
-//import minimist from 'minimist';
-//import fetch from 'node-fetch';
+import minimist from 'minimist';
+import fetch from 'node-fetch';
 
 
 const args = minimist(process.argv.slice(2));
