@@ -1,11 +1,11 @@
 #!/usr/bin/env node 
 import minimist from 'minimist';
-import fetch from 'node-fetch';
-import { rps } from "/lib/rpsls.js"
+import { rps } from 'node-rpsls'
+
 
 const args = minimist(process.argv.slice(2));
-
-if (args[0] === '-h' || args[0] === '--help') {
+function help()
+{
   console.log('Usage: node rps.js [SHOT]\n');
   console.log('Play Rock Paper Scissors (RPS)\n');
   console.log('Options:');
@@ -19,19 +19,33 @@ if (args[0] === '-h' || args[0] === '--help') {
   process.exit(0);
 }
 
-if (args[0]== '-r' ||args[0]== '--rules')
+function rules()
 {
   console.log('  Rules for Rock Paper Scissors:');
   console.log('- Scissors CUTS Paper');
   console.log('- Paper COVERS Rock');
   console.log('- Rock CRUSHES Scissors')
 }
+if (args[0] === '-h' || args[0] === '--help') 
+{
+  help();
+}
+else if (args[0]== '-r' ||args[0]== '--rules')
+{
+  rules();
+}
+else 
+{
+      const shot=rpsls(args._[0]);
+      const result= RPS(shot) || RPSLS(shot)
 
-
-try {
-      console.log(JSON.stringify(rps(shot)));
-    } catch (e) {
-      console.error(JSON.stringify({ error: e.message }));
+   if (result instanceof Error){
+    console.error(JSON.stringify(`Error: ${result}. is out of range`));
+    help();
+    rules();
+   }
+  else {
+    console.log(JSON.stringify(result));
     } 
-
+    }
 
