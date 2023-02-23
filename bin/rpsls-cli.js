@@ -1,43 +1,51 @@
-./bin/*-cli.js
-#!/usr/bin/env node
+#!/usr/bin/env node 
 import minimist from 'minimist';
-import fetch from 'node-fetch';
-import { rpsls } from "/lib/rpsls.js"
+import { rpsls } from 'node-rpsls'
+
 
 const args = minimist(process.argv.slice(2));
 
-if (args[0] === '-h' || args[0] === '--help') {
-  console.log('Usage: node-rpsls [SHOT]\n');
-  console.log('Play the Lizard-Spock Expansion of Rock Paper Scissors (RPSLS)!\n');
+{
+  console.log('Usage: node rps.js [SHOT]\n');
+  console.log('Play Rock Paper Scissors (RPS)\n');
   console.log('Options:');
   console.log('-h, --help  display this help message and exit');
   console.log('-r, --rules display the rules and exit\n');
   console.log('Examples:');
-  console.log('node-rpsls                  Return JSON with single player RPSLS result.');
+  console.log('node rps.js                  Return JSON with single player RPS result.');
   console.log('                             e.g. {"player":"rock"}');
-  console.log('node-rpsls rock             Return JSON with results for RPSLS played against a simulated opponent.');
-  console.log('                             e.g {"player":"rock","opponent":"Spock","result":"lose"}');
+  console.log('node rps.js rock             Return JSON with results for RPS played against a simulated opponent.');
+  console.log('                             e.g {"player":"rock","opponent":"scissors","result":"win"}');
   process.exit(0);
 }
 
-if (args[0] === '-r' || args[0] === '--rules') {
-  console.log('Rules for Lizard-Spock Expansion of Rock Paper Scissors:');
+function rules() 
+
+{
+  console.log('  Rules for Rock Paper Scissors:');
   console.log('- Scissors CUTS Paper');
   console.log('- Paper COVERS Rock');
-  console.log('- Rock CRUSHES Lizard');
-  console.log('- Lizard POISONS Spock');
-  console.log('- Spock SMASHES Scissors');
-  console.log('- Scissors DECAPITATES Lizard');
-  console.log('- Lizard EATS Paper');
-  console.log('- Paper DISPROVES Spock');
-  console.log('- Spock VAPORIZES Rock');
-  console.log('- Rock CRUSHES Scissors');
-  process.exit(0);
+  console.log('- Rock CRUSHES Scissors')
 }
-/*
-try {
-      console.log(JSON.stringify(rpsls(shot)));
-    } catch (e) {
-      console.error(JSON.stringify({ error: e.message }));
+if (args[0] === '-h' || args[0] === '--help') 
+{
+  help();
+}
+
+if (args[0]== '-r' ||args[0]== '--rules')
+{
+  rules();
+}
+else 
+{
+      let result=rpsls(args._[0]);
+   if (result instanceof Error){
+    console.error(JSON.stringify(`Error: ${result}. is out of range`));
+    help();
+    rules();
+   }
+  else {
+    console.log(JSON.stringify(result));
+    
+    } 
     }
-    */
