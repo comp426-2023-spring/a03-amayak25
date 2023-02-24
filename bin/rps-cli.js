@@ -39,16 +39,13 @@ else if (args.r || args.rules)
 {
   rules();
 }
-else{
-  let result=args._[0]; 
-      try
-      {
-       console.log(JSON.stringify(rps(result)));
-      }
-   catch(error) {
-    console.error(`${result} is out of range`);
-    help();
-    rules();
-    proccess.exit(1);
+let result = rps(args._[0]);
+
+if (result === 'error') {
+  console.error(`${args._[0]} is out of range.`);
+  help();
+  rules();
+} else {
+  console.log(JSON.stringify(result));
   }
 }
