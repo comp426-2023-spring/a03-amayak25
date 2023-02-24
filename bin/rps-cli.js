@@ -39,14 +39,12 @@ else if (args[0]== '-r' ||args[0]== '--rules')
 }
 if (args.h || args.help) 
 {
-  console.log(help);
-  process.exit(0);
+  help();
 }
 
 if (args.r ||args.rules)
 {
-  console.log(rules);
-  process.exit(0);
+  rules();
 }
 
 
