@@ -40,7 +40,7 @@ else if (args.r ||args.rules)
   rules();
 }
 else{
-  let result=rpsls(args._[0]); 
+  let result=rps(args._[0]); 
       try
       {
        console.log(JSON.stringify(result));
