@@ -44,8 +44,9 @@ else if (args.r ||args.rules)
 {
   rules();
 }
+let result=rpsls(args._[0]);  
 else{
-      let result=rpsls(args._[0]);  
+      
       try
       {
        console.log(JSON.stringify(result));
@@ -54,5 +55,6 @@ else{
     console.error(`${result} is out of range`);
     help();
     rules();
+    proccess.exit(1);
   }
 }
