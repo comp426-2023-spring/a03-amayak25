@@ -17,7 +17,7 @@ function help()
   console.log('                             e.g. {"player":"rock"}');
   console.log('node-rpsls rock             Return JSON with results for RPSLS played against a simulated opponent.');
   console.log('                             e.g {"player":"rock","opponent":"Spock","result":"lose"}');
-  process.exit(0);
+
 }
 
 function rules() 
@@ -33,7 +33,7 @@ function rules()
     console.log('- Paper DISPROVES Spock');
     console.log('- Spock VAPORIZES Rock');
     console.log('- Rock CRUSHES Scissors');
-    process.exit(0);
+  
 }
 if (args.h || args.help) 
 {
