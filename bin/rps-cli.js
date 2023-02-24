@@ -32,12 +32,12 @@ function rules()
 
 if (args.h || args.help) 
 {
-  help();
+  console.log(help);
 }
 
 else if (args.r ||args.rules)
 {
-  rules();
+  console.log(rules);
 }
 else{
   let result=rps(args._[0]); 
