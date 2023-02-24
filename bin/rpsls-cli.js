@@ -35,12 +35,12 @@ function rules()
     console.log('- Rock CRUSHES Scissors');
     process.exit(0);
 }
-if (args[0] === '-h' || args[0] === '--help') 
+if (args.h || args.help) 
 {
   help();
 }
 
-if (args[0]== '-r' ||args[0]== '--rules')
+if (args.r ||args.rules)
 {
   rules();
 }
