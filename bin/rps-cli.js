@@ -29,14 +29,7 @@ function rules()
   console.log('- Paper COVERS Rock');
   console.log('- Rock CRUSHES Scissors')
 }
-if (args[0] === '-h' || args[0] === '--help') 
-{
-  help();
-}
-else if (args[0]== '-r' ||args[0]== '--rules')
-{
-  rules();
-}
+
 if (args.h || args.help) 
 {
   help();
