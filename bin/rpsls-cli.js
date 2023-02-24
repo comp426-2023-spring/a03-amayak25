@@ -38,21 +38,23 @@ function rules()
 if (args.h || args.help) 
 {
   help();
+  process.exit(0);
 }
 
 else if (args.r ||args.rules)
 {
-  rules();
+ rules();
+ process.exit(0);
 }
 
 else{
-  let result=args._[0]; 
+  let shot=args._[0]; 
       try
       {
-       console.log(JSON.stringify(rpsls(result)));
+       console.log(JSON.stringify(rpsls(shot)));
       }
    catch(error) {
-    console.error(`${result} is out of range`);
+    console.error(`${shot} is out of range`);
     help();
     rules();
     proccess.exit(1);
