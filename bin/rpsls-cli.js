@@ -44,8 +44,8 @@ if (args.r ||args.rules)
 {
   console.log(rules);
 }
-else 
-{
+
+
       let result=rpsls(args._[0]);
       
       try
