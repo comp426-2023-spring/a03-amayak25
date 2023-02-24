@@ -23,37 +23,38 @@ function help()
 function rules() 
   {
     console.log('Rules for Lizard-Spock Expansion of Rock Paper Scissors:');
-    console.log('- Scissors CUTS Paper');
-    console.log('- Paper COVERS Rock');
-    console.log('- Rock CRUSHES Lizard');
-    console.log('- Lizard POISONS Spock');
-    console.log('- Spock SMASHES Scissors');
-    console.log('- Scissors DECAPITATES Lizard');
-    console.log('- Lizard EATS Paper');
-    console.log('- Paper DISPROVES Spock');
-    console.log('- Spock VAPORIZES Rock');
-    console.log('- Rock CRUSHES Scissors');
+    console.log(' Scissors CUTS Paper');
+    console.log(' Paper COVERS Rock');
+    console.log(' Rock CRUSHES Lizard');
+    console.log(' Lizard POISONS Spock');
+    console.log(' Spock SMASHES Scissors');
+    console.log(' Scissors DECAPITATES Lizard');
+    console.log(' Lizard EATS Paper');
+    console.log(' Paper DISPROVES Spock');
+    console.log(' Spock VAPORIZES Rock');
+    console.log(' Rock CRUSHES Scissors');
   
 }
 if (args.h || args.help) 
 {
-  help();
+  console.log(help);
 }
 
 if (args.r ||args.rules)
 {
-  rules();
+  console.log(rules);
 }
 else 
 {
       let result=rpsls(args._[0]);
-   if (result instanceof Error){
+      
+      try
+      {
+       console.log(JSON.stringify(result));
+      }
+      
+   catch(error) {
     console.error(JSON.stringify(`${result} is out of range`));
-    help();
-    rules();
-   }
-  else {
-    console.log(JSON.stringify(result));
-    
-    } 
+    console.log(help);
+    console.log(rules);
   }
