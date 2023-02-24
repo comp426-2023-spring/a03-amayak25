@@ -48,4 +48,3 @@ if (result === 'error') {
 } else {
   console.log(JSON.stringify(result));
   }
-}
