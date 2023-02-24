@@ -42,6 +42,7 @@ if (args.r ||args.rules)
 
 
       let result=rps(args._[0]);
+      else{
       
       try
       {
@@ -52,4 +53,5 @@ if (args.r ||args.rules)
     console.log(help);
     console.log(rules);
     process.exit(1);
+  }
   }
