@@ -46,10 +46,10 @@ else if (args.r ||args.rules)
 }
 
 else{
-  let result=rpsls(args._[0]); 
+  let result=args._[0]; 
       try
       {
-       console.log(JSON.stringify(result));
+       console.log(JSON.stringify(rpsls(result)));
       }
    catch(error) {
     console.error(`${result} is out of range`);
