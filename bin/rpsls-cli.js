@@ -40,20 +40,19 @@ if (args.h || args.help)
   help();
 }
 
-if (args.r ||args.rules)
+else if (args.r ||args.rules)
 {
   rules();
 }
-
-
-      let result=rpsls(args._[0]);
-      
+else{
+      let result=rpsls(args._[0]);  
       try
       {
        console.log(JSON.stringify(result));
       }
-      
    catch(error) {
-    console.log(help);
-    console.log(rules);
+    console.error(`${result} is out of range`);
+    help();
+    rules();
   }
+}
