@@ -37,12 +37,12 @@ function rules()
 }
 if (args.h || args.help) 
 {
-  console.log(help);
+  help();
 }
 
 if (args.r ||args.rules)
 {
-  console.log(rules);
+  rules();
 }
 
 
