@@ -48,7 +48,7 @@ else
 {
       let result=rpsls(args._[0]);
    if (result instanceof Error){
-    console.error(JSON.stringify(`Error: ${result}. is out of range`));
+    console.error(JSON.stringify(`${result} is out of range`));
     help();
     rules();
    }
