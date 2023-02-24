@@ -56,7 +56,6 @@ if (args.r ||args.rules)
       }
       
    catch(error) {
-    console.error(JSON.stringify(`${result} is out of range`));
     console.log(help);
     console.log(rules);
   }
