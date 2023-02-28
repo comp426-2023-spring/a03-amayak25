@@ -28,6 +28,7 @@ export function rules()
   console.log('- Scissors CUTS Paper');
   console.log('- Paper COVERS Rock');
   console.log('- Rock CRUSHES Scissors')
+  process.exit(0);
 }
 
 if (args.h || args.help) 
