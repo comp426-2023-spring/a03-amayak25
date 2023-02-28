@@ -7,7 +7,7 @@ import { rps } from "../lib/rpsls.js";
 
 
 const args = minimist(process.argv.slice(2));
-function help()
+export function help()
 {
   console.log('Usage: node rps.js [SHOT]\n');
   console.log('Play Rock Paper Scissors (RPS)\n');
@@ -22,7 +22,7 @@ function help()
   process.exit(0);
 }
 
-function rules()
+export function rules()
 {
   console.log('  Rules for Rock Paper Scissors:');
   console.log('- Scissors CUTS Paper');
