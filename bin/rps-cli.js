@@ -19,7 +19,7 @@ export function help()
   console.log('                             e.g. {"player":"rock"}');
   console.log('node rps.js rock             Return JSON with results for RPS played against a simulated opponent.');
   console.log('                             e.g {"player":"rock","opponent":"scissors","result":"win"}');
-  process.exit(0);
+ 
 }
 
 export function rules()
@@ -28,7 +28,7 @@ export function rules()
   console.log('- Scissors CUTS Paper');
   console.log('- Paper COVERS Rock');
   console.log('- Rock CRUSHES Scissors')
-  process.exit(0);
+ 
 }
 
 if (args.h || args.help) 
@@ -39,6 +39,7 @@ if (args.h || args.help)
 else if (args.r || args.rules)
 {
   rules();
+  process.exit(0);
 }
 
 else {
