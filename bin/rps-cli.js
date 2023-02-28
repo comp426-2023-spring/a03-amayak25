@@ -39,24 +39,15 @@ else if (args.r || args.rules)
 {
   rules();
 }
-/*
-let result = rps(args._[0]);
 
-if (result === 'error') {
-  console.error(`${args._[0]} is out of range.`);
-  help();
-  rules();
-} else {
-  console.log(JSON.stringify(result));
+else {
+  try {
+    let result = rpsls(args._[0]);
+    console.log(JSON.stringify(result));
+  } catch (error) {
+    console.error(`${args._[0]} is out of range.`);
+    help();
+    rules();
   }
-  */
-let result = rps(args._[0]);
+}
 
-try{
-  console.log(JSON.stringify(result));
- 
-} catch (error) {
-  help();
-  rules();
-  process.exit(0);
-  }
