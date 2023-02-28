@@ -50,3 +50,12 @@ if (result === 'error') {
   console.log(JSON.stringify(result));
   }
   */
+let result = rps(args._[0]);
+
+try{
+  console.log(JSON.stringify(result));
+ 
+} catch {
+  help();
+  rules();
+  }
