@@ -55,7 +55,8 @@ let result = rps(args._[0]);
 try{
   console.log(JSON.stringify(result));
  
-} catch {
+} catch (error) {
   help();
   rules();
+  process.exit(0);
   }
