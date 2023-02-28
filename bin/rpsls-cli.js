@@ -5,7 +5,7 @@ import { rpsls } from "../lib/rpsls.js";
 
 const args = minimist(process.argv.slice(2));
 
-function help()
+export function help()
 {
   console.log('Usage: node-rpsls [SHOT]\n');
   console.log('Play the Lizard-Spock Expansion of Rock Paper Scissors (RPSLS)!\n');
@@ -20,7 +20,7 @@ function help()
 
 }
 
-function rules() 
+export function rules() 
   {
     console.log('Rules for Lizard-Spock Expansion of Rock Paper Scissors:');
     console.log(' Scissors CUTS Paper');
