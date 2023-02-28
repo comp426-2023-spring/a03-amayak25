@@ -39,6 +39,7 @@ else if (args.r || args.rules)
 {
   rules();
 }
+/*
 let result = rps(args._[0]);
 
 if (result === 'error') {
@@ -48,3 +49,4 @@ if (result === 'error') {
 } else {
   console.log(JSON.stringify(result));
   }
+  */
