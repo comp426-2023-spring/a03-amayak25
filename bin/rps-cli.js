@@ -42,7 +42,7 @@ else if (args.r || args.rules)
 
 else {
   try {
-    let result = rpsls(args._[0]);
+    let result = rps(args._[0]);
     console.log(JSON.stringify(result));
   } catch (error) {
     console.error(`${args._[0]} is out of range.`);
