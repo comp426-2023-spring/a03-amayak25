@@ -35,16 +35,16 @@ function rules()
     console.log(' Rock CRUSHES Scissors');
   
 }
+
 if (args.h || args.help) 
 {
   help();
-  process.exit(0);
 }
 
-else if (args.r ||args.rules)
+else if (args.r || args.rules)
 {
- rules();
- process.exit(0);
+  rules();
+  process.exit(0);
 }
 
 else {
@@ -53,7 +53,7 @@ else {
     console.log(JSON.stringify(result));
   } catch (error) {
     console.error(`${args._[0]} is out of range.`);
-    console.log(`${help()}`);
-    console.log(`${rules()}`);
+    console.log(help());
+    console.log(rules());
   }
 }
