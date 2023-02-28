@@ -47,16 +47,21 @@ else if (args.r ||args.rules)
  process.exit(0);
 }
 
-else{
-  let shot=args._[0]; 
-      try
-      {
-       console.log(JSON.stringify(rpsls(shot)));
-      }
-   catch(error) {
+let shot = args._[0];
+
+try {
+  console.log(JSON.stringify(rpsls(shot)));
+} catch(error) {
+  if (error instanceof RangeError) {
     console.error(`${shot} is out of range`);
     help();
     rules();
-    proccess.exit(1);
+    process.exit(1);
+  } //TRYING TO SEE ABOUT ANOTHER ERROR
+  else {
+    console.error("An unknown error occurred!");
+    process.exit(1);
   }
 }
+
+ 
