@@ -53,6 +53,7 @@ else {
     console.log(JSON.stringify(result));
   } catch (error) {
     console.error(`${args._[0]} is out of range.`);
-    console.log(`${help()}${rules()}`);
+    console.log(`${help()}`);
+    console.log(`${rules()}`);
   }
 }
