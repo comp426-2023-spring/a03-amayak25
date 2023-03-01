@@ -55,5 +55,6 @@ else {
     console.error(`${args._[0]} is out of range.`);
    console.log(help());
     console.log(rules());
+    process.exit(1);
   }
 }
