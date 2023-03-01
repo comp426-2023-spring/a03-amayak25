@@ -23,16 +23,16 @@ export function help()
 export function rules() 
   {
     console.log('Rules for Lizard-Spock Expansion of Rock Paper Scissors:');
-    console.log(' Scissors CUTS Paper');
-    console.log(' Paper COVERS Rock');
-    console.log(' Rock CRUSHES Lizard');
-    console.log(' Lizard POISONS Spock');
-    console.log(' Spock SMASHES Scissors');
-    console.log(' Scissors DECAPITATES Lizard');
-    console.log(' Lizard EATS Paper');
-    console.log(' Paper DISPROVES Spock');
-    console.log(' Spock VAPORIZES Rock');
-    console.log(' Rock CRUSHES Scissors');
+    console.log('- Scissors CUTS Paper');
+    console.log('- Paper COVERS Rock');
+    console.log('- Rock CRUSHES Lizard');
+    console.log('- Lizard POISONS Spock');
+    console.log('- Spock SMASHES Scissors');
+    console.log('- Scissors DECAPITATES Lizard');
+    console.log('- Lizard EATS Paper');
+    console.log('- Paper DISPROVES Spock');
+    console.log('- Spock VAPORIZES Rock');
+    console.log('- Rock CRUSHES Scissors');
   
 }
 
