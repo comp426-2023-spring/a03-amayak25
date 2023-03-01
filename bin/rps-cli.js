@@ -27,7 +27,7 @@ export function rules()
   console.log('  Rules for Rock Paper Scissors:');
   console.log('- Scissors CUTS Paper');
   console.log('- Paper COVERS Rock');
-  console.log('- Rock CRUSHES Scissors')
+  console.log('- Rock CRUSHES Scissors');
  
 }
 
