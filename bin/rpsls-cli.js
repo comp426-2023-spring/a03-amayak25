@@ -23,6 +23,7 @@ export function help()
 export function rules() 
   {
     console.log('Rules for Lizard-Spock Expansion of Rock Paper Scissors:');
+    console.log();
     console.log('- Scissors CUTS Paper');
     console.log('- Paper COVERS Rock');
     console.log('- Rock CRUSHES Lizard');
